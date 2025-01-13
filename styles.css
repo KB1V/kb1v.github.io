@@ -1,9 +1,10 @@
-/* Global Styles */
+/* General Styles */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   background: #121212;
+  overflow: hidden;
 }
 
 header {
@@ -26,6 +27,10 @@ header {
   gap: 20px;
 }
 
+.nav-links li {
+  display: inline;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #fff;
@@ -34,6 +39,22 @@ header {
 
 .nav-links a:hover {
   color: #0dd9f5;
+}
+
+/* Circle Effect */
+#mouse-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(13, 217, 245, 0.2);
+  border: 1px solid rgba(13, 217, 245, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: background 0.3s, transform 0.1s;
 }
 
 /* Hero Section */
@@ -46,7 +67,7 @@ header {
   text-align: center;
 }
 
-.hero-content h2 {
+.hero-content h1 {
   font-size: 3rem;
 }
 
@@ -55,37 +76,17 @@ header {
   margin: 10px 0 20px;
 }
 
-.btn {
+.cta {
   padding: 10px 20px;
   background: #0dd9f5;
   color: #121212;
-  border: none;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 1rem;
-  cursor: pointer;
   transition: background 0.3s;
 }
 
-.btn:hover {
+.cta:hover {
   background: #08a3bf;
-}
-
-/* Sections */
-section {
-  padding: 50px 20px;
-}
-
-#projects .project-card {
-  background: #1a1a1a;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-#projects .project-card:hover {
-  transform: translateY(-10px);
 }
 
 /* Footer */
@@ -94,15 +95,3 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
-.social-links a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.social-links a:hover {
-  color: #0dd9f5;
-}
-
