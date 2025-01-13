@@ -1,80 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kristiyan Bonev - Portfolio focused on cybersecurity and cryptocurrency">
-    <title>Kristiyan Bonev - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="mouse-circle"></div>
-    <header>
-        <div class="logo">KB<span class="highlight">_CYBER</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #121212;
+  overflow: hidden;
+}
 
-    <section id="hero">
-        <div class="content">
-            <h1>Kristiyan Bonev</h1>
-            <p>Software Support | Cybersecurity Enthusiast | Cryptocurrency Innovator</p>
-            <a href="#projects" class="cta">View My Work</a>
-        </div>
-    </section>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1a1a1a;
+}
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate professional specializing in software support, cybersecurity, and cryptocurrency technologies. 
-            With a keen interest in innovation and secure systems, I aim to develop solutions that are both resilient and groundbreaking.
-        </p>
-    </section>
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0dd9f5;
+}
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <h3>Crypto Tracker</h3>
-                <p>An app to track and analyze cryptocurrency trends in real time.</p>
-            </div>
-            <div class="project">
-                <h3>Penetration Testing Toolkit</h3>
-                <p>A comprehensive toolkit for penetration testing and network security auditing.</p>
-            </div>
-            <div class="project">
-                <h3>Secure Cloud App</h3>
-                <p>A cloud-based application with end-to-end encryption for file storage.</p>
-            </div>
-        </div>
-    </section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+.nav-links li {
+  display: inline;
+}
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+.nav-links a:hover {
+  color: #0dd9f5;
+}
 
-            <button type="submit">Send</button>
-        </form>
-    </section>
+/* Circle Effect */
+#mouse-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(13, 217, 245, 0.2);
+  border: 1px solid rgba(13, 217, 245, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: background 0.3s, transform 0.1s;
+}
 
-    <footer>
-        <p>&copy; 2025 Kristiyan Bonev. All Rights Reserved.</p>
-    </footer>
+/* Hero Section */
+#hero {
+  height: 100vh;
+  background: linear-gradient(120deg, #0d0d0d, #0dd9f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+
+.cta {
+  padding: 10px 20px;
+  background: #0dd9f5;
+  color: #121212;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #08a3bf;
+}
+
+/* Footer */
+footer {
+  background: #0d0d0d;
+  text-align: center;
+  padding: 20px;
+}
