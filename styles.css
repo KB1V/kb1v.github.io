@@ -4,42 +4,20 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: linear-gradient(120deg, #0d0d0d, #0dd9f5);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #1a1a1a;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0dd9f5;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #0dd9f5;
+/* Footer */
+footer {
+  background: #0d0d0d;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
 }
 
 /* Circle Effect */
@@ -58,48 +36,65 @@ header {
   transition: background 0.3s, transform 0.1s;
 }
 
-/* Section Titles */
-section h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Hero Section */
-#hero {
-  height: 100vh;
+/* Header */
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-}
-
-#hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-}
-
-.cta {
   padding: 10px 20px;
-  background: #0dd9f5;
-  color: #121212;
-  border-radius: 20px;
+  background: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0dd9f5;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+  position: relative;
+}
+
+.nav-links a {
   text-decoration: none;
-  transition: background 0.3s;
+  color: #fff;
+  transition: color 0.3s;
+  position: relative;
 }
 
-.cta:hover {
-  background: #08a3bf;
+/* Hover underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #0dd9f5;
+  transition: width 0.3s ease-in-out;
 }
 
-/* Footer */
-footer {
-  background: #0d0d0d;
-  text-align: center;
-  padding: 20px;
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.nav-links a.active {
+  color: #0dd9f5;
+}
+
+.nav-links a.active::after {
+  width: 100%;
 }
