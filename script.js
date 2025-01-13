@@ -3,6 +3,7 @@ const circle = document.getElementById('mouse-circle');
 
 document.addEventListener('mousemove', (e) => {
   const { clientX: x, clientY: y } = e;
+  // Adjusted to ensure the circle stays centered
   circle.style.left = `${x}px`;
   circle.style.top = `${y}px`;
 });
