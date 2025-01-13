@@ -4,7 +4,8 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: #121212;
-  overflow: hidden;
+  /* Removed overflow: hidden to allow scrolling */
+  overflow: auto;
 }
 
 header {
@@ -52,7 +53,7 @@ header {
   background: rgba(13, 217, 245, 0.2);
   border: 1px solid rgba(13, 217, 245, 0.5);
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Ensures the circle is centered */
   z-index: 1000;
   transition: background 0.3s, transform 0.1s;
 }
