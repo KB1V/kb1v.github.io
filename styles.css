@@ -4,7 +4,6 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: #121212;
-  /* Removed overflow: hidden to allow scrolling */
   overflow: auto;
 }
 
@@ -53,7 +52,6 @@ header {
   background: rgba(13, 217, 245, 0.2);
   border: 1px solid rgba(13, 217, 245, 0.5);
   pointer-events: none;
-  transform: translate(-50%, -50%); /* Ensures the circle is centered */
   z-index: 1000;
   transition: background 0.3s, transform 0.1s;
 }
@@ -90,7 +88,27 @@ header {
   background: #08a3bf;
 }
 
-/* Footer */
+/* Futuristic Scroll Indicator */
+#scroll-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 200px;
+  background: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(13, 217, 245, 0.7);
+}
+
+#scroll-progress {
+  width: 100%;
+  background: linear-gradient(180deg, #0dd9f5, #08a3bf);
+  border-radius: 5px;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
 footer {
   background: #0d0d0d;
   text-align: center;
