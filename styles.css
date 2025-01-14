@@ -3,9 +3,13 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  background: #121212;
+  background: linear-gradient(120deg, #0d0d0d, #0dd9f5); /* Consistent background */
+  min-height: 100vh; /* Ensure the body takes full height */
+  display: flex;
+  flex-direction: column; /* Allow footer to stick to the bottom */
 }
 
+/* Header Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -75,7 +79,6 @@ header {
 /* Hero Section */
 #hero {
   height: 100vh;
-  background: linear-gradient(120deg, #0d0d0d, #0dd9f5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,27 +109,23 @@ header {
   background: #08a3bf;
 }
 
-/* About Section */
-#about {
+/* Section Styles */
+section {
   padding: 50px 20px;
   text-align: center;
+  flex-grow: 1; /* Ensures content takes available space */
 }
 
-#about h2 {
+section h2 {
   font-size: 2rem;
 }
 
-#about p {
+section p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
 /* Projects Section */
-#projects {
-  padding: 50px 20px;
-  text-align: center;
-}
-
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -152,21 +151,7 @@ header {
   line-height: 1.5;
 }
 
-/* Contact Section */
-#contact {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2rem;
-}
-
-#contact p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
+/* Form Styles */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -210,6 +195,7 @@ footer {
   background: #0d0d0d;
   text-align: center;
   padding: 20px;
+  margin-top: auto; /* Push footer to bottom */
 }
 
 footer p {
@@ -220,18 +206,17 @@ footer p {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   margin: 20px 0;
 }
 
-.social-link {
-  text-decoration: none;
+.social-link i {
+  font-size: 3rem;
   color: #fff;
-  font-size: 1.5rem;
   transition: color 0.3s, transform 0.3s;
 }
 
-.social-link:hover {
+.social-link i:hover {
   color: #0dd9f5;
   transform: scale(1.2);
 }
@@ -264,23 +249,4 @@ footer p {
   .project {
     width: 100%;
   }
-}
-
-/* Social Icons - Below Form */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 20px 0;
-}
-
-.social-link i {
-  font-size: 3rem; /* Adjust icon size */
-  color: #fff;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.social-link i:hover {
-  color: #0dd9f5;
-  transform: scale(1.2);
 }
