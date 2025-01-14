@@ -7,7 +7,7 @@ document.addEventListener('mousemove', (e) => {
   circle.style.top = `${y}px`;
 });
 
-// Center circle around pointer
+// Center circle around pointer and scale it when mouse is over the page
 document.addEventListener('mouseover', () => {
   circle.style.transform = 'translate(-50%, -50%) scale(1.2)';
 });
@@ -16,7 +16,7 @@ document.addEventListener('mouseout', () => {
   circle.style.transform = 'translate(-50%, -50%) scale(1)';
 });
 
-// Highlight active nav link
+// Highlight active nav link (only applies to links with `.nav-links a`)
 const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
   if (link.href === window.location.href) {
