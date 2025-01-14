@@ -265,3 +265,22 @@ footer p {
     width: 100%;
   }
 }
+
+/* Social Icons - Below Form */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.social-link i {
+  font-size: 3rem; /* Adjust icon size */
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link i:hover {
+  color: #0dd9f5;
+  transform: scale(1.2);
+}
