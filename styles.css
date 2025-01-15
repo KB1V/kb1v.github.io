@@ -4,9 +4,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: linear-gradient(120deg, #0d0d0d, #0dd9f5); /* Consistent background */
-  min-height: 100vh; /* Ensure the body takes full height */
+  height: 100vh; /* Ensure the body takes full height */
   display: flex;
   flex-direction: column; /* Allow footer to stick to the bottom */
+  overflow: hidden; /* Disable scrolling */
 }
 
 /* Header Styles */
