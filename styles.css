@@ -237,3 +237,21 @@ form button:hover {
   transform: translateY(-10px); /* Lift the project slightly */
   box-shadow: 0px 8px 20px rgba(13, 217, 245, 0.8), 0px 0px 30px rgba(13, 217, 245, 0.6);
 }
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.social-link i {
+  font-size: 3rem;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link i:hover {
+  color: #0dd9f5;
+  transform: scale(1.2);
+}
