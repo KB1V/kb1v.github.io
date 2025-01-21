@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  background: #121212; /* Adjusted to match the uniform dark background */
+  background: linear-gradient(120deg, #0d0d0d, #0dd9f5); /* Restored the original gradient background */
   height: 100vh;
   display: flex;
   flex-direction: column;
