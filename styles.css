@@ -4,11 +4,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: linear-gradient(120deg, #0d0d0d, #0dd9f5); /* Consistent background */
-  height: 100%; /* Ensure the body takes full height */
+  height: 100vh; /* Ensure the body takes full height */
   display: flex;
   flex-direction: column; /* Allow footer to stick to the bottom */
-  overflow-x: hidden; /* Disable horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow: hidden; /* Disable scrolling */
 }
 
 /* Header Styles */
@@ -19,7 +18,6 @@ header {
   padding: 10px 20px;
   background: #1a1a1a;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -117,43 +115,6 @@ section h2 {
 }
 
 section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Experience Section (Added for Your Experience Page) */
-#experience {
-  min-height: calc(100vh - 100px); /* Allow enough space for content and footer */
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#experience h2 {
-  font-size: 2rem;
-}
-
-#experience p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-#experience .professional-summary,
-#experience .experience-section {
-  margin-bottom: 30px;
-}
-
-#experience .experience-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-#experience .experience-section ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-#experience .experience-section li {
   font-size: 1.1rem;
   line-height: 1.6;
 }
